@@ -1,5 +1,3 @@
-//start from 20151224
-//ended at	 20151225
 #ifndef MYSQLMANAGER_H
 #define MYSQLMANAGER_H
 #include <iostream>
