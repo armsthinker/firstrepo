@@ -4,7 +4,7 @@
 MySQLManager::MySQLManager( )
 {
 	m_pConn		= NULL;
-	m_pingTimer = 0;
+	m_pingTimer     = 0;
 	m_blostdbconnection = false;
 	m_bconnected		= false;
 }
@@ -13,7 +13,6 @@ MySQLManager::MySQLManager( )
 MySQLManager::MySQLManager(const char* hosts,		const char* userName,
 						   const char* password,	const char* dbName,int port )
 {
-	//Kill();
 	m_pConn = mysql_init(NULL);
 	if( !m_pConn ){ m_bconnected = false; ShowError(); return;}
 	if (!mysql_real_connect(m_pConn, hosts, userName, password, dbName, port, NULL, 0))
@@ -109,7 +108,7 @@ int  MySQLManager::AddSelectResults(vector< vector<string> > &vdb)
 					maxLength.push_back(field->max_length);
 				}
 			}
-			vrow.push_back( row[i]==NULL?"":row[i] ); //´¦ÀíNULL
+			vrow.push_back( row[i]==NULL?"":row[i] ); //Â´Â¦Ã€Ã­NULL
 		}
 		vdb.push_back(vrow);
 	}
